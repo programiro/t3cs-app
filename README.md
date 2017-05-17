@@ -1,5 +1,22 @@
 # Medienagenten Docker TYPO3
 
+
+## t3cs example
+```zsh
+git clone git@github.com:programiro/t3cs-docker.git t3cs-docker
+cd t3cs-docker
+git clone git@github.com:programiro/t3cs-app.git appdocker-compose up -d
+make bash
+./setup.sh
+gulp watch 
+``` 
+
+im Browser localhost:8000 öffnen.
+
+Diese Entwicklungsumgebung ist nur ein Beispiel und in keinster weise Final. Gulp-Task etc. sind auch nicht "schön" gemacht oder fertiggestellt.
+
+
+
 ## Requirements
 **Docker**
 http://bitbucket.org/a-messer/medienagenten-docker.git
@@ -31,17 +48,37 @@ TYPO3 Install Tool -> Folder Structure -> Fix File & Folder Permissions
 
 ## First Install
 
-Mit `make bash` in den App-Container einloggen.
+in den App-Docker einloggen
+```zsh
+make bash
+``` 
 
-Mit `./setup.sh` den first install ausführen.
+
+den first install ausführen.
+```zsh
+./setup.sh
+``` 
 
 
 ## Gulp watcher ausführen
 
-Mit `make bash` in den App-Container einloggen.
+in den App-Docker einloggen
+```zsh
+make bash
+``` 
 
-Mit `gulp` alle Task auflisten
+alle Task auflisten
+```zsh
+gulp
+``` 
 
-Mit `gulp watch` /src Ordner watchen
+/src Ordner watchen
+```zsh
+gulp watch
+```  
 
-Mit `gulp build` build Prozess starten
+
+build Prozess starten
+```zsh
+gulp build
+```  
