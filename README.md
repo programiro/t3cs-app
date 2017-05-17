@@ -8,7 +8,7 @@ cd t3cs-docker
 git clone git@github.com:programiro/t3cs-app.git app
 docker-compose up -d
 make bash
-./setup.sh
+./setup.sh --import-db
 gulp watch 
 ``` 
 
