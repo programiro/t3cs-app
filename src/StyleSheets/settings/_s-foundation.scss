@@ -1,0 +1,48 @@
+/******************************************************************************
+    Foundation: Overwrite default variables
+ *****************************************************************************/
+
+/* Color
+*****************************************************************************/
+$primary-color: $color-white;
+$secondary-color: $color-black;
+
+
+/* Body
+*****************************************************************************/
+
+$body-font-family: Courier, serif;
+$body-font-color: $secondary-color;
+
+
+/* Header & Paragraphs
+*****************************************************************************/
+$header-font-family: $body-font-family;
+
+
+/* Anchor
+*****************************************************************************/
+$anchor-color: $secondary-color;
+
+/* Grid
+*****************************************************************************/
+$grid-row-width: 100%;
+
+
+/******************************************************************************
+   Foundation: Import & Includes
+ *****************************************************************************/
+
+/* Import
+*****************************************************************************/
+@import "../../../bower_components/foundation-sites/scss/foundation";
+
+
+/* Includes
+*****************************************************************************/
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-visibility-classes;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+@include foundation-float-classes;

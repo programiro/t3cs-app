@@ -1,0 +1,90 @@
+
+#
+# LIVE
+#
+config {
+    index_enable = 0
+    index_externals = 0
+    index_metatags = 0
+
+    no_cache = 0
+    cache_clearAtMidnight = 1
+    sendCacheHeaders = 1
+
+    admPanel = 0
+
+    doctypeSwitch = 0
+    doctype = html5
+
+    language = en
+    htmlTag_setParams = lang="en" class="no-js"
+    locale_all = en_US.UTF-8
+    renderCharset = utf-8
+    metaCharset = utf-8
+    additionalHeaders {
+        10.header = Content-Type:text/html;charset=utf-8
+    }
+
+    spamProtectEmailAddresses = 2
+    spamProtectEmailAddresses_atSubst = (at)
+
+    removeDefaultJS = external
+    concatenateCss = 1
+    concatenateJs = 1
+    compressJs = 1
+    compressCss = 1
+
+    inlineStyle2TempFile = 1
+    disablePrefixComment = 1
+    disableImgBorderAttr = 1
+
+    noPageTitle = 0
+    pageTitle.override.data = TSFE:altPageTitle
+    pageTitle.noTrimWrap = | | • {$site.pageTitle}|
+
+    pageRendererTemplateFile = EXT:siteconfig/Resources/Private/Page/PageRenderer.html
+
+    # RealURL konfigurieren
+    baseURL =
+    absRefPrefix = /
+    tx_realurl_enable = 1
+    simulateStaticDocuments = 0
+    typolinkEnableLinksAcrossDomains = 0
+    redirectOldLinksToNew = 0
+    prefixLocalAnchors = all
+}
+
+
+#
+# DEV & PREVIEW
+#
+[applicationContext = Development/Docker]
+    config {
+        admPanel = 0
+        debug = 1
+        disablePrefixComment = 0
+        no_cache = 1
+        sendCacheHeaders = 0
+
+        concatenateCss = 0
+        concatenateJs = 0
+        compressJs = 0
+        compressCss = 0
+
+        contentObjectExceptionHandler = 0
+    }
+
+[applicationContext = Production/Staging]
+    config {
+        admPanel = 0
+        debug = 1
+        disablePrefixComment = 1
+        no_cache = 1
+        sendCacheHeaders = 0
+
+        concatenateCss = 0
+        concatenateJs = 0
+        compressJs = 0
+        compressCss = 0
+    }
+[END]

@@ -1,0 +1,5 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:siteconfig/Configuration/TypoScript/Setup/plugin" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:siteconfig/Configuration/TypoScript/Setup/lib" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:siteconfig/Configuration/TypoScript/Setup/tt_content" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:siteconfig/Configuration/TypoScript/Setup/fluid" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:siteconfig/Configuration/TypoScript/Setup/page" extensions="t3s">

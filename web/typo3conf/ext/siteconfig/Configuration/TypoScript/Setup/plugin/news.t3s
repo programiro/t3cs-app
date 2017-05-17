@@ -1,0 +1,25 @@
+plugin.tx_news {
+	view {
+		templateRootPaths {
+			99 = EXT:siteconfig/Resources/Private/Plugin/News/Templates/
+		}
+
+		partialRootPaths {
+			99 = EXT:siteconfig/Resources/Private/Plugin/News/Partials/
+		}
+
+		layoutRootPaths {
+			99 = EXT:siteconfig/Resources/Private/Plugin/News/Layouts/
+		}
+	}
+
+	_LOCAL_LANG {
+		default {
+			dateFormat = d.m.Y
+		}
+	}
+
+	settings {
+		cropMaxCharacters = 1000
+	}
+}

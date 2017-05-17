@@ -1,0 +1,102 @@
+page {
+    #
+    # Metatags definieren
+    #
+    meta {
+        author {
+            data = DB:pages:{$site.pid.defaultMetaTags}:author
+            override {
+                required = 1
+                data = field:author
+            }
+        }
+
+        keywords {
+            data = DB:pages:{$site.pid.defaultMetaTags}:keywords
+            override {
+                required = 1
+                data = field:keywords
+            }
+            crop = 1024||1
+        }
+
+        description {
+            data = DB:pages:{$site.pid.defaultMetaTags}:description
+            override {
+                required = 1
+                data = field:description
+            }
+        }
+
+        #
+        # Static Meta-Tags
+        #
+        HandheldFriendly = true
+        MobileOptimized = 320
+        viewport = width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0
+        Robots = index,follow
+        revisit-after = 14 days
+        cleartype = on
+
+
+        #
+        # Open Graph -> http://ogp.me/
+        #
+        og:type = website
+        og:type.attribute = property
+
+        og:site_name = {$site.pageTitle}
+        og:site_name.attribute = property
+
+        og:title {
+            cObject = TEXT
+            cObject {
+                field = title
+            }
+            attribute = property
+        }
+
+        og:description {
+            cObject = TEXT
+            cObject {
+                data = DB:pages:{$site.pid.defaultMetaTags}:description
+                override {
+                    required = 1
+                    data = field:description
+                }
+            }
+            attribute = property
+        }
+
+        og:url {
+            cObject = TEXT
+            cObject {
+                data = getIndpEnv:TYPO3_REQUEST_URL
+            }
+            attribute = property
+        }
+
+        og:image {
+            cObject = FILES
+            cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                renderObj = TEXT
+                renderObj {
+                    data = file:current:publicUrl
+                }
+            }
+            attribute = property
+        }
+    }
+}
+
+[globalVar = GP:tx_news_pi1|news > 0]
+    page {
+        meta {
+            og:title >
+            og:description >
+        }
+    }
+[END]

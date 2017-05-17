@@ -1,0 +1,19 @@
+<?php
+
+/****
+ * Rename this file from PrivateSettings.php.dist to PrivateSettings.php
+ * if you need a private, non tracked configuration in this TYPO3 installation.
+ *
+ * PrivateSettings.php IS NOT UNDER VERSION CONTROL
+ *
+ */
+
+use TYPO3\CMS\Core\Utility\ArrayUtility;
+
+$additionalConfiguration = array(
+	'BE' => array(
+		'installToolPassword' => ''
+	)
+);
+
+ArrayUtility::mergeRecursiveWithOverrule($GLOBALS['TYPO3_CONF_VARS'], $additionalConfiguration);

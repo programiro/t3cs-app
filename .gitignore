@@ -1,0 +1,83 @@
+# --------------------
+# OSX Files
+# --------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+/Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# --------------------
+# Node Modules
+# --------------------
+node_modules
+
+# --------------------
+# Node Modules
+# --------------------
+bower_components
+
+# --------------------
+# IDE Files
+# --------------------
+.idea/
+
+# --------------------
+# SASS Files
+# --------------------
+.sass-cache/
+
+# --------------------
+# <codekit>
+# --------------------
+config.codekit
+
+# --------------------
+# Bower Files
+# --------------------
+.bower-*/
+
+# --------------------
+# Project
+# --------------------
+.bundle/
+backup/
+bin/
+Gemfile.lock
+
+# --------------------
+# Composer
+# --------------------
+composer.lock
+
+# --------------------
+# Generated / copied files
+# --------------------
+web/typo3conf/ext/siteconfig/Resources/Public
+
+
+
+# --------------------
+# TYPO3
+# --------------------
+vendor/
+typo3_src/
+
+web/index.php
+web/fileadmin
+web/typo3
+web/typo3temp
+web/uploads
+
+web/typo3conf/ext/realurl
+web/typo3conf/ext/gridelements
+web/typo3conf/ext/extension_builder
+web/typo3conf/ext/belayout_fileprovider
+web/typo3conf/ext/news
+
+web/typo3conf/PrivateSettings.php
+web/typo3conf/deprecation_*
+web/typo3conf/ENABLE_INSTALL_TOOL
+

@@ -1,0 +1,46 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers">
+
+    <f:layout name="Standard" />
+    <f:section name="Main">
+
+        <div class="row align-center align-middle text-center">
+            <div class="small-12 columns">
+                {content -> f:format.raw()}
+
+                <br><br>
+
+                <p class="lead">
+                    We&nbsp;have&nbsp;installed for&nbsp;u:
+                </p>
+                <ul class="m-default__menu no-bullet">
+                    <li><a href="https://nodejs.org/en/" target="_blank">Node</a></li>
+                    <li><a href="https://bower.io" target="_blank">Bower</a></li>
+                    <li><a href="http://gulpjs.com/" target="_blank">Gulp</a></li>
+                    <li><a href="http://sass-lang.com/" target="_blank">Sass</a>/<a href="http://compass-style.org/" target="_blank">Compass</a></li>
+                    <li><a href="http://foundation.zurb.com/sites/docs/" target="_blank">Foundation</a></li>
+                </ul>
+
+                <br><br><br>
+
+                <p class="lead">
+                    Development links:
+                </p>
+                <ul class="m-default__menu no-bullet">
+                    <li>
+                        <a href="http://localhost:1080/" target="_blank">Mailcatcher</a>
+                    </li>
+                    <li>
+                        <a href="/typo3" target="_blank">Backend</a>
+                    </li>
+                    <li>
+                        <a href="/typo3/install" target="_blank">Install-Tool</a>
+                    </li>
+                </ul>
+
+                <br><br><br>
+            </div>
+        </div>
+
+    </f:section>
+</div>

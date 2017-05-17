@@ -1,0 +1,125 @@
+tx_gridelements.setup {
+    # Name or Alias of Element
+    oneColumn {
+        title = Eine Spalte
+        description = Inhaltscontainer mit Abständen Links/Rechts: Small, Medium, Large & Indented
+        icon = EXT:siteconfig/Resources/Public/Images/Icons/content-text-columns.svg
+        config {
+            rowCount = 1
+            colCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Inhalte
+                            colPos = 10
+                        }
+                    }
+                }
+            }
+        }
+
+        flexformDS (
+      <T3DataStructure>
+        <meta>
+          <langDisable>1</langDisable>
+        </meta>
+        <ROOT type="array">
+          <type>array</type>
+          <el type="array">
+            <columnType type="array">
+              <TCEforms type="array">
+                <label>Column Type</label>
+                <config type="array">
+                  <type>select</type>
+                  <items type="array">
+                    <numIndex index="0" type="array">
+                      <numIndex index="0">Small</numIndex>
+                      <numIndex index="1">0</numIndex>
+                    </numIndex>
+                    <numIndex index="1" type="array">
+                      <numIndex index="0">Medium</numIndex>
+                      <numIndex index="1">1</numIndex>
+                    </numIndex>
+                    <numIndex index="2" type="array">
+                      <numIndex index="0">Large</numIndex>
+                      <numIndex index="1">2</numIndex>
+                    </numIndex>
+                    <numIndex index="3" type="array">
+                      <numIndex index="0">Indented</numIndex>
+                      <numIndex index="1">3</numIndex>
+                    </numIndex>
+                  </items>
+                </config>
+              </TCEforms>
+            </columnType>
+          </el>
+        </ROOT>
+      </T3DataStructure>
+        )
+    }
+
+    twoColumn {
+        title = Zwei Spalten
+        description = Inhaltscontainer mit zwei Spalten
+        icon = EXT:siteconfig/Resources/Public/Images/Icons/content-text-columns.svg
+        config {
+            rowCount = 1
+            colCount = 2
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Inhalte Links
+                            colPos = 10
+                        }
+                        2 {
+                            name = Inhalte Rechts
+                            colPos = 20
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bezugsquellen {
+        title = Bezugsquellen
+        description = Inhaltscontainer mit maximal drei Spalten
+        icon = EXT:siteconfig/Resources/Public/Images/Icons/content-text-columns.svg
+        config {
+            rowCount = 1
+            colCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Inhalte
+                            colPos = 10
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    klassifikationen {
+        title = Klassifikationen
+        description = Inhaltscontainer mit maximal zwei Spalten
+        icon = EXT:siteconfig/Resources/Public/Images/Icons/content-text-columns.svg
+        config {
+            rowCount = 1
+            colCount = 1
+            rows {
+                1 {
+                    columns {
+                        1 {
+                            name = Inhalte
+                            colPos = 10
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

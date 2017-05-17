@@ -1,0 +1,26 @@
+{
+  "name": "medienagenten",
+  "description": "Docker: Typo3 Gulp…",
+  "main": "",
+  "authors": [
+    "Miro Olma <olma@medienagenten.de>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.3.0"
+  },
+  "overrides": {
+    "foundation-sites": {
+      "main": [
+        "dist/js/plugins/foundation.core.js",
+        "dist/js/plugins/foundation.util.mediaQuery.js"
+      ]
+    }
+  }
+}

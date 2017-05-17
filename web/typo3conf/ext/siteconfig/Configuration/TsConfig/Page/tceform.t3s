@@ -1,0 +1,38 @@
+TCEFORM {
+    pages {
+        // General
+        nav_title.disabled = 1
+        subtitle.disabled = 1
+
+        // Metadata
+        abstract.disabled = 1
+        author.disabled = 1
+        author_email.disabled = 1
+        lastUpdated.disabled = 1
+
+        // Appearance
+        layout.disabled = 1
+        newUntil.disabled = 1
+        content_from_pid.disabled = 1
+
+        // Behavior
+        cache_timeout.disabled = 1
+        cache_tags.disabled = 1
+        no_cache.disabled = 1
+        no_search.disabled = 1
+
+        // Resources
+        TSconfig.disabled = 1
+
+        // Categories
+        categories.disabled = 1
+    }
+
+    tt_content {
+
+    }
+
+    tx_news_domain_model_news {
+
+    }
+}

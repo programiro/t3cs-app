@@ -1,0 +1,24 @@
+<f:comment>
+    <div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://xsd.helhum.io/ns/typo3/cms-fluid/master/ViewHelpers"></div>
+</f:comment>
+
+<section class="grid grid-3-column row">
+    <f:if condition="{data.header}">
+        <f:if condition="{data.header_layout}!=100">
+            <header>
+                <h2>{data.header}</h2>
+            </header>
+        </f:if>
+    </f:if>
+    <div class="grid-columns">
+        <div class="grid-column small-12 medium-4 columns">
+            {data.tx_gridelements_view_column_1 -> f:format.raw()}
+        </div>
+        <div class="grid-column small-12 medium-4 columns">
+            {data.tx_gridelements_view_column_0 -> f:format.raw()}
+        </div>
+        <div class="grid-column small-12 medium-4 columns">
+            {data.tx_gridelements_view_column_2 -> f:format.raw()}
+        </div>
+    </div>
+</section>

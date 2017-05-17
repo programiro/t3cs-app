@@ -1,0 +1,20 @@
+tt_content.gridelements_pi1.20.10.setup {
+
+    # Grid Element with name "oneColumn" etc.
+    # @see EXT:siteconfig/Configuration/TsConfig/Page/gridelements.t3s
+    oneColumn < lib.gridelements.defaultGridSetup
+    oneColumn {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:siteconfig/Resources/Private/Plugin/Gridelements/OneColumn.html
+        }
+    }
+
+    twoColumn < lib.gridelements.defaultGridSetup
+    twoColumn {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:siteconfig/Resources/Private/Plugin/Gridelements/TwoColumn.html
+        }
+    }
+}

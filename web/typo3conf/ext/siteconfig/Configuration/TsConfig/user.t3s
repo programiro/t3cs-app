@@ -1,0 +1,13 @@
+setup {
+    default {
+        edit_docModuleUpload = 0
+    }
+
+    override {
+        edit_docModuleUpload = 0
+    }
+
+    fields {
+        edit_docModuleUpload.disabled = 1
+    }
+}

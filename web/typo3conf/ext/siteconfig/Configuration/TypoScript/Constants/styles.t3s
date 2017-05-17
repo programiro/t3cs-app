@@ -1,0 +1,10 @@
+styles.content {
+    textmedia {
+        maxW = 870
+
+        linkWrap {
+            width = 1200m
+            height = 900m
+        }
+    }
+}

@@ -1,0 +1,18 @@
+site {
+    pageTitle = Medienagenten TYPO3
+
+    dir {
+        css = EXT:siteconfig/Resources/Public/StyleSheets
+        js = EXT:siteconfig/Resources/Public/JavaScripts
+        images = EXT:siteconfig/Resources/Public/Images
+        misc = EXT:siteconfig/Resources/Public/Misc
+
+        templates = EXT:siteconfig/Resources/Private/Page/Templates/
+        partials = EXT:siteconfig/Resources/Private/Page/Partials/
+        layouts = EXT:siteconfig/Resources/Private/Page/Layouts/
+    }
+
+    pid {
+        defaultMetaTags = 1
+    }
+}

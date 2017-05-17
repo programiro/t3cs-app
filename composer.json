@@ -1,0 +1,43 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/cseifert/typo3-typoscript-lint.git"
+    }
+  ],
+  "name": "typo3/cms-base-distribution",
+  "description" : "TYPO3 CMS Base Distribution",
+  "license": "GPL-2.0+",
+  "require": {
+    "typo3/cms": "8.7.*",
+    "typo3-ter/news": "^6.0.0",
+    "gridelementsteam/gridelements": "dev-master",
+    "typo3-ter/realurl": "2.2.0"
+  },
+  "require-dev": {
+    "helmich/typo3-typoscript-lint": "dev-master"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "web"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Medienagenten\\Siteconfig\\": "web/typo3conf/ext/siteconfig/Classes"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "curdir=`pwd`; rm -f `pwd`/web/index.php; cp `pwd`/vendor/typo3/cms/index.php `pwd`/web/index.php; cd $curdir"
+    ],
+    "post-update-cmd": [
+      "curdir=`pwd`; rm -f `pwd`/web/index.php; cp `pwd`/vendor/typo3/cms/index.php `pwd`/web/index.php; cd $curdir"
+    ]
+  }
+}

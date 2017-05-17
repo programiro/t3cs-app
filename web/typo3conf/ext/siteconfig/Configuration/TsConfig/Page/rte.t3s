@@ -1,0 +1,3 @@
+RTE.default {
+    showButtons := addToList(link,chMode,removeformat)
+}

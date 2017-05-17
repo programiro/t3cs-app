@@ -1,0 +1,120 @@
+page = PAGE
+page {
+    typeNum = 0
+
+    #
+    # StyleSheet includes
+    #
+    includeCSS {
+        main = {$site.dir.css}/main.min.css
+    }
+
+    #
+    # Javascript includes
+    #
+    // Header
+    includeJSLibs {
+        modernizr = {$site.dir.misc}/modernizr-custom.js
+        modernizr.forceOnTop = 1
+    }
+
+    // Footer
+    includeJSFooter {
+        vendor = {$site.dir.js}/vendor.min.js
+        main = {$site.dir.js}/main.min.js
+    }
+
+    #
+    # Body Tag
+    #
+    bodyTagCObject = CASE
+    bodyTagCObject {
+        key.data = levelfield:-1, backend_layout_next_level, slide
+        key.override.field = backend_layout
+
+        default = TEXT
+        default {
+            value = <body itemscope="" itemtype="http://schema.org/WebPage">
+        }
+    }
+
+    #
+    # Content
+    #
+    10 = FLUIDTEMPLATE
+    10 {
+        extbase.pluginName = Pi1
+        extbase.controllerExtensionName = Siteconfig
+
+        partialRootPath = {$site.dir.partials}
+        layoutRootPath = {$site.dir.layouts}
+
+        template = CASE
+        template {
+            key {
+                data = levelfield:-1, backend_layout_next_level, slide
+                override.field = backend_layout
+            }
+
+            # default template file
+            default = FILE
+            default.file = {$site.dir.templates}Standard.html
+
+            # template file for backend-layout with ID=1 etc
+            1 = FILE
+            1.file = {$site.dir.templates}Standard.html
+
+            # Landingpage
+            2 = FILE
+            2.file = {$site.dir.templates}Landingpage.html
+        }
+
+        variables {
+            content = CONTENT
+            content {
+                table = tt_content
+                select {
+                    orderBy = sorting
+                    where = colPos=0
+                }
+            }
+        }
+    }
+
+    #
+    # Google Analytics
+    #
+    99 = TEXT
+    99.value (
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXX-XX', 'auto');
+    ga('send', 'pageview');
+</script>
+    )
+}
+
+#
+# DEVELOPMENT
+#
+[applicationContext = Development/Docker]
+    page {
+        # Override min files
+        includeCSS {
+            main = {$site.dir.css}/main.css
+        }
+
+        # Override min files
+        includeJSFooter {
+            vendor = {$site.dir.js}/vendor.js
+            main = {$site.dir.js}/main.js
+        }
+
+        # Remove Google Analytics
+        99 >
+    }
+[END]

@@ -1,0 +1,11 @@
+mod {
+    web_layout {
+        menu {
+            # Disables all items except the "Columns" item:
+            function {
+                # Disable "Quick Edit"
+                0 = 0
+            }
+        }
+    }
+}

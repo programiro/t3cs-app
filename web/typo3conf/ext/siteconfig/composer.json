@@ -1,0 +1,22 @@
+{
+  "name": "medienagenten/siteconfig",
+  "type": "typo3-cms-extension",
+  "description": "Medienagenten TYPO3 Site Configuration",
+  "homepage": "https://bitbucket.org/medienagenten/medienagenten-gulp-typo3/",
+  "license": ["GPL-2.0+"],
+  "keywords": ["TYPO3 CMS", "Medienagenten", "Site Configuration"],
+  "support": {
+    "issues": "https://bitbucket.org/medienagenten/medienagenten-gulp-typo3/issues/"
+  },
+  "require": {
+    "typo3/cms-core": "^7.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Medienagenten\\Siteconfig\\": "Classes/"
+    }
+  },
+  "replace": {
+    "siteconfig": "self.version"
+  }
+}

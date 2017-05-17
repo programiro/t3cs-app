@@ -1,0 +1,35 @@
+/******************************************************************************
+    Base: Default
+ *****************************************************************************/
+
+/* Default theme
+*****************************************************************************/
+.b-default {
+
+  &__page-header {
+    min-height: rem-calc(150px);
+    padding: 2vh;
+    .row {
+      border-bottom: 1px solid $secondary-color;
+    }
+  }
+
+  &__page-content {
+    position: relative;
+    height: auto;
+    padding: 2vh;
+    .row {
+      min-height: calc(100vh - 9.375rem - 9.375rem);
+      border-bottom: 1px solid $secondary-color;
+    }
+  }
+
+  &__page-footer {
+    padding: 2vh;
+  }
+
+}
+
+p {
+  letter-spacing: .05em;
+}
