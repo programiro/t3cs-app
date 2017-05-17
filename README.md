@@ -5,7 +5,8 @@
 ```zsh
 git clone git@github.com:programiro/t3cs-docker.git t3cs-docker
 cd t3cs-docker
-git clone git@github.com:programiro/t3cs-app.git appdocker-compose up -d
+git clone git@github.com:programiro/t3cs-app.git app
+docker-compose up -d
 make bash
 ./setup.sh
 gulp watch 
