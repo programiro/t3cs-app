@@ -14,8 +14,15 @@ gulp watch
 
 im Browser localhost:8000 öffnen.
 
+---
+
+Benutzername / Passwörter / Installtool = t3cs
+
+---
+
 Diese Entwicklungsumgebung ist nur ein Beispiel und in keinster weise Final. Gulp-Task etc. sind auch nicht "schön" gemacht oder fertiggestellt.
 
+---
 
 
 ## Requirements
